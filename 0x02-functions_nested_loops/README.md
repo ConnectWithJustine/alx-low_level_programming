@@ -24,5 +24,4 @@
 * Parameters
 * Function Body
 
-
-**[Ugwu Justine]** (www.github.com/ugwujustine)- ALX-Africa SE Student
+[**Ugwu Justine**](www.github.com/ugwujustine)- ALX-Africa SE Student
