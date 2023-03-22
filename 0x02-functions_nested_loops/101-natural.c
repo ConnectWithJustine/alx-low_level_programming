@@ -9,12 +9,13 @@
 int main(void)
 {
 	int count;
-	unsigned long fib1 = 0, fib2 = 1, sum;
+	unsigned long fib1 = 0, fib2 = 1, sum, temp;
 
 	for (count = 0; count < 50; count++)
 	{
 		sum += fib2;
-		unsigned long temp = fib1 + fib2;
+		temp = fib1 + fib2;
+
 		fib1 = fib2;
 		fib2 = temp;
 	}
