@@ -13,9 +13,11 @@ int main(void)
 
 	for (count = 0; count < 50; count++)
 	{
+		if (count < 2 ||count >= 48)
+		{
 		sum += fib2;
+		}
 		temp = fib1 + fib2;
-
 		fib1 = fib2;
 		fib2 = temp;
 	}
