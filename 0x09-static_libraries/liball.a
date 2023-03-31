@@ -1,0 +1,208 @@
+!<arch>
+0-isupper.c/    0           0     0     644     217       `
+#include "main.h"
+
+/**
+ * _isupper - check if c is uppercase
+ * @c: input for alphabet
+ *
+ * Return: 1 if true else 0
+ */
+int _isupper(int c)
+{
+	if (c >= 65 && c <= 90)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
+
+0-memset.c/     0           0     0     644     377       `
+#include "main.h"
+
+/**
+ * _memset - a function that fills memory with a constant byte
+ * @s: string
+ * @b: input varible of char tye represents the charcter to fil s
+ * @n: unsigned int variable the number of bytes to be filled
+ *
+ * Return: A pointer
+ */
+
+char *_memset(char *s, char b, unsigned int n)
+{
+	unsigned int i;
+
+	for (i = 0; i < n; i++)
+		s[i] = b;
+
+	return (s);
+}
+
+0-strcat.c/     0           0     0     644     356       `
+#include "main.h"
+/**
+ * _strcat - function that concatenates two strings.
+ * @dest: pointer to destnation input
+ * @src: pointer to source input
+ *
+ * Return: pointer to resulting string (dest)
+ */
+
+char *_strcat(char *dest, char *src)
+{
+	int c, c2;
+
+	c = 0;
+	while (dest[c])
+		c++;
+
+	for (c2 = 0; src[c2]; c2++)
+		dest[c++] = src[c2];
+
+	return (dest);
+}
+100-atoi.c/     0           0     0     644     164       `
+#include "main.h"
+/**
+ * atoi - function that converts a string into an integer
+ * @s: string input pointer
+ *
+ * Return: 0
+ */
+int _atoi(char *s)
+{
+	return (0);
+}
+1-isdigit.c/    0           0     0     644     208       `
+#include "main.h"
+/**
+ * _isdigit - check if input is digit
+ * @c: string
+ *
+ * Return: true = 1, false = 0
+ */
+
+int _isdigit(int c)
+{
+	if (c >= 48 && c <= 57)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
+1-memcpy.c/     0           0     0     644     297       `
+#include "main.h"
+/**
+ * _memcpy - function that copies memory
+ * @dest: copy to
+ * @src: copy from
+ * @n: n bytes of @src
+ *
+ * Return: Always 0 (success)
+ */
+
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	unsigned int i;
+
+	for (i = 0; i < n; i++)
+		dest[i] = src[i];
+	return (dest);
+}
+
+1-strncat.c/    0           0     0     644     412       `
+#include "main.h"
+/**
+ * _strncat - a function that concatenates two strings.
+ * @dest: pointer to destination input
+ * @src: pointer to source input
+ * @n: most number of bytes from @src
+ *
+ * Return: @dest
+*/
+
+char *_strncat(char *dest, char *src, int n)
+{
+	int c, i;
+
+	c = 0;
+
+	while (dest[c])
+		c++;
+
+	for (i = 0; i < n && src[i] != '\0'; i++)
+		dest[c + i] = src[i];
+	dest[c + i] = '\0';
+
+	return (dest);
+}
+2-strchr.c/     0           0     0     644     381       `
+#include "main.h"
+/**
+ * _strchr - a function that locates a character in a string
+ *
+ * @s: pointer to our string array input
+ * @c: character to locate from input array
+ *
+ * Return: first occurence of charatcer or null if not found
+*/
+
+char *_strchr(char *s, char c)
+{
+	while (*s != '\0')
+	{
+		if (*s == c)
+			return (s);
+		s++;
+	}
+	if (*s == c)
+		return (s);
+	return ('\0');
+}
+
+2-strlen.c/     0           0     0     644     226       `
+#include "main.h"
+/**
+ * _strlen - count the length of string
+ *
+ * @s: pointer to char that takes string input
+ *
+ * Return: string length
+*/
+
+int _strlen(char *s)
+{
+	int i;
+
+	for (i = 0; s[i] != '\0';)
+		i++;
+	return (i);
+}
+2-strncpy.c/    0           0     0     644     0         `
+3-islower.c/    0           0     0     644     0         `
+3-puts.c/       0           0     0     644     0         `
+3-strcmp.c/     0           0     0     644     0         `
+3-strspn.c/     0           0     0     644     0         `
+4-isalph.c/     0           0     0     644     0         `
+4-strpbrk.c/    0           0     0     644     0         `
+5-strstr.c/     0           0     0     644     0         `
+6-abs.c/        0           0     0     644     0         `
+9-strcpy.c/     0           0     0     644     0         `
+_putchar.c/     0           0     0     644     176       `
+#include "main.h"
+/**
+ * _putchar - writes the charcter c to standard output
+ * @c: String
+ * Return: success 1 else -1
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}

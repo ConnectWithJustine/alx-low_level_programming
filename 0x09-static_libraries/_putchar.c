@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _putchar - writes the charcter c to standard output
  * @c: String
@@ -7,5 +6,5 @@
  */
 int _putchar(char c)
 {
-	return (write(1, % c, 1));
+	return (write(1, &c, 1));
 }
