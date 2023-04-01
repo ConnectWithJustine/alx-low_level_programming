@@ -8,15 +8,11 @@
 
 int main(int argc, char *argv[])
 {
-	int i, j;
+	int i;
 
-	for (i = 0; argv[i]; i++)
+	for (i = 0; i < argc; i++)
 	{
-		for (j = 0; argv[i][j]; j++)
-		{
-			_putchar(argv[i][j]);
-		}
-		_putchar('\n');
+		printf("%s\n", argv[i]);
 	}
 	return (0);
 }
