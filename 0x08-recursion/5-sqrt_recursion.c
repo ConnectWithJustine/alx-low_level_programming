@@ -11,7 +11,7 @@ int _sqrt_recursion(int n)
 {
 	if ((n == 1) || (n == 0))
 		return (n);
-	return (_sqrt_helper(n, n / 2));
+	return (_sqrt_helper(n, 1));
 }
 
 /**
@@ -25,7 +25,7 @@ int _sqrt_helper(int i, int guess)
 {
 	if (guess * guess == i)
 		return (guess);
-	if (guess <= 0)
+	if (guess * guess > i)
 		return (-1);
-			return (_sqrt_helper(i, guess - 1));
+			return (_sqrt_helper(i, guess + 1));
 }
