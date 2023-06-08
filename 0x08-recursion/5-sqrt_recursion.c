@@ -26,6 +26,6 @@ int _sqrt_helper(int i, int guess)
 	if (guess * guess == i)
 		return (guess);
 	if (guess <= 0)
-		return (-1)
+		return (-1);
 			return (_sqrt_helper(n, guess - 1));
 }
