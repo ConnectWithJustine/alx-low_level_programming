@@ -5,12 +5,12 @@ A static library, also known as an archive, is a collection of object files that
 
 ### Here's a step-by-step explanation of how to create and use a static library:
 
-1. **Compilation:** First, you need to compile the source code files into object files (.o files). This can be done using a compiler such as GCC or Clang. For example, to compile a C source file named example.c into an object file, you can use the following command: gcc -c example.c
+1.**Compilation:** First, you need to compile the source code files into object files (.o files). This can be done using a compiler such as GCC or Clang. For example, to compile a C source file named example.c into an object file, you can use the following command: gcc -c example.c
 
 2.**Archiving:** Once you have the object files, you can create a static library using the ar command. The ar command is typically available on Unix-like systems. Here's the basic syntax:ar rcs libexample.a example.o
 In this command, libexample.a is the name of the static library you want to create, and example.o is the object file you want to include in the library. You can include multiple object files by specifying them one after another.
 
-3. **Indexing:** After creating the static library, it's a good practice to run the ranlib command to create an index for the library. The index allows faster access to the symbols within the library. The ranlib command is optional on some systems, as newer versions of ar automatically generate the index. Here's an example:ranlib libexample.a
+3.**Indexing:** After creating the static library, it's a good practice to run the ranlib command to create an index for the library. The index allows faster access to the symbols within the library. The ranlib command is optional on some systems, as newer versions of ar automatically generate the index. Here's an example:ranlib libexample.a
 
 ### Using the static library: 
 
