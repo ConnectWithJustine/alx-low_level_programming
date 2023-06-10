@@ -8,29 +8,42 @@
 * Return: cent else 1
 **/
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
+	int cent, coins;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	int cents = atoi(argv[1]);
-
-	if (cents < 0)
+	cent = atoi(argv[1]);
+	coins = 0;
+	if (cent > 25)
 	{
-		printf("0\n");
-		return (0);
+		while (cent >= 25)
+			cent -= 25, coins++;
 	}
-	int coinValues[] = {25, 10, 5, 2, 1};
-	int numCoins = 0;
-
-	for (int i = 0; i < sizeof(coinValues) / sizeof(coinValues[0]); i++)
+	if (cent > 10 && cent < 25)
 	{
-		numCoins += cents / coinValues[i];
-		cents %= coinValues[i];
+		while (cent >= 10)
+			cent -= 10, coins++;
 	}
-	printf("%d\n", numCoins);
+	if (cent > 5 && cent < 10)
+	{
+		while (cent >= 5)
+			cent -= 5, coins++;
+	}
+	if (cent > 2 && cent < 5)
+	{
+		while (cent >= 2)
+			cent -= 2, coins++;
+	}
+	if (cent == 1 || cent == 2 || cent == 5 ||
+	    cent == 10 || cent == 25)
+	{
+		coins++;
+	}
+	printf("%d\n", coins);
 	return (0);
 }
-
