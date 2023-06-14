@@ -4,10 +4,10 @@
 
 ## Table of Contents
 
- [Automatic Allocation and Dynamic Allocation](#automatic-allocation-and-dynamic-allocation)
- [The `malloc()` and `free()` Functions](#the-malloc-and-free-functions)
- [Using `malloc()` to Solve a Factorial Recursion Task](#using-malloc-to-solve-a-factorial-recursion-task)
- [Using Valgrind to Check for Memory Leaks](#using-valgrind-to-check-for-memory-leaks)
+1. [Automatic Allocation and Dynamic Allocation](#automatic-allocation-and-dynamic-allocation)
+2. [The `malloc()` and `free()` Functions](#the-malloc-and-free-functions)
+3. [Using `malloc()` to Solve a Factorial Recursion Task](#using-malloc-to-solve-a-factorial-recursion-task)
+4. [Using Valgrind to Check for Memory Leaks](#using-valgrind-to-check-for-memory-leaks)
 
 ## Automatic Allocation and Dynamic Allocation
 
