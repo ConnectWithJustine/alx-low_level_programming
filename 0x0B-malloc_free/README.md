@@ -3,7 +3,6 @@
 # Dynamic Allocation and Memory Management in C
 
 ## Table of Contents
-
 - [Automatic Allocation and Dynamic Allocation](#automatic-allocation-and-dynamic-allocation)
 - [The `malloc()` and `free()` Functions](#the-malloc-and-free-functions)
 - [Using `malloc()` to Solve a Factorial Recursion Task](#using-malloc-to-solve-a-factorial-recursion-task)
