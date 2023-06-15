@@ -7,45 +7,36 @@
  *
  * Return:if fail return '\0' else treat it as an empty string
  */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *p;
-	unsigned int size_1 = 0, size_2 = 0, i;
+	unsigned int size_1, i, e;
+	char *a;
 
 	if (s1 == NULL)
 		s1 = "";
 
 	if (s2 == NULL)
 		s2 = "";
+	l1 = 0;
+	while (s1[size_1])
+		size_1++;
 
-	while (s1[size_1] != '\0')
+	a = malloc(sizeof(*a) * size_1 + n + 1);
+
+	if (a == NULL)
+		return (NULL);
+
+	for (i = 0, e = 0; i < (size_1 + n); i++)
 	{
-		size1_++;
+		if (i < l1)
+		{
+			a[i] = s1[i];
+		}
+		else
+		{
+			a[i] = s2[e++];
+		}
 	}
-
-	while (s2[size_2] != '\0')
-	{
-		size_2++;
-	}
-
-	if (n > size_2)
-	n = size2;
-	p = malloc((size_1 + n + 1) * sizeof(char));
-
-	if (p == NULL)
-		return (0);
-
-	for (i = 0; i < size_1; i++)
-	{
-		p[i] = s1[i];
-	}
-
-	for (; i < (size_1 + n); i++)
-	{
-		p[i] = s2[i - size_1];
-	}
-	p[i] = '\0';
-
-	return (p);
+	a[i] = '\0';
+	return (a);
 }
