@@ -19,7 +19,8 @@ int is_positive_number(char *str)
 }
 
 /**
- * print_error_exit - a function that checks for an error and exits with status 98
+ * print_error_exit - a function that checks for an error
+ * and exits with status 98
  */
 void print_error_exit(void)
 {
