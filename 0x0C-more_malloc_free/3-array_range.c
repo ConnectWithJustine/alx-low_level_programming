@@ -1,4 +1,5 @@
 #include "mian.h"
+#include <stdio.h>
 /**
  * array_range - a function that creates an array of integers.
  * @min: input min.
