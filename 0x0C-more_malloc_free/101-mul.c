@@ -6,12 +6,12 @@
  * Return: 0 on success else 1
  */
 
-int is_positive_number(const char* str) 
+int is_positive_number(char* str) 
 {
     int i = 0;
     while (str[i]) 
     {
-        if (!isdigit(str[i]))
+        if (str[i] < '0' || str > '9')
             return 0;
         i++;
     }
