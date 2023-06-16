@@ -1,5 +1,4 @@
-#include "mian.h"
-#include <stdio.h>
+#include "main.h"
 /**
  * array_range - a function that creates an array of integers.
  * @min: input min.
@@ -9,8 +8,7 @@
  */
 int *array_range(int min, int max)
 {
-	int *p;
-	int i, full;
+	int *p, i, full;
 
 	full = (max - min) + 1;
 	if (min > max)
