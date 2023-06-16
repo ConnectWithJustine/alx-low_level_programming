@@ -2,8 +2,8 @@
 
 /**
  * strtow - a function that splits a string into words.
- *@str: string
- *@av: arguments
+ * @str: string
+ * @av: arguments
  * Return: NULL if str == NULL or str == ""
  */
 char **strtow(char *str)

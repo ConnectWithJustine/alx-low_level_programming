@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 /**
 * _calloc - a function that allocates memory for an array
 * @nmemb: input string.
