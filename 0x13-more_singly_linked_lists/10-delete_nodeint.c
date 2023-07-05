@@ -1,43 +1,39 @@
 #include "lists.h"
 
 /**
- * insert_nodeint_at_index - sum the values of the list.
+ * delete_nodeint_at_index - deletes a node at an index
+ * @head: pointer to the head of the list
+ * @index: index of the node to be added
  *
- * @head: A pointer to the first node of the list
- * @idx: index of the list.
- * @n: value of number.
- * Return: Value of a node index.
+ * Return: the address of the node
  */
-listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
+int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	unsigned int i = 1;
-	listint_t *index_node = *head;
-	listint_t *insert;
-	listint_t *h = *head;
+	listint_t *old_node = NULL;
+	listint_t *previous_node = NULL;
+	unsigned int i = 0, list_len = listint_len(*head);
 
-	if (head == NULL)
-		return (NULL);
-	while (i < idx)
+	if ((index > list_len) || (list_len == 0))
+		return (-1);
+	while (head)
 	{
-		index_node = (*head)->next;
-		*head = index_node;
-		++i;
+		if (i == index)
+		{
+			old_node = *head;
+			if (i == 0)
+			{
+				*head = old_node->next;
+				free(old_node);
+				return (1);
+			}
+			previous_node->next = old_node->next;
+			free(old_node);
+			return (1);
+		}
+		else if ((i + 1) == index)
+			previous_node = *head;
+		head = &((*head)->next);
+		i++;
 	}
-	insert = malloc(sizeof(listint_t));
-
-	if (insert == NULL)
-		return (NULL);
-	insert->n = n;
-	if (idx == 0)
-	{
-		insert->next = *head;
-		*head = insert;
-	}
-	else
-	{
-		insert->next = (*head)->next;
-		(*head)->next = insert;
-		*head = h;
-	}
-	return (insert);
+	return (-1);
 }
