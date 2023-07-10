@@ -1,5 +1,6 @@
 #include "main.h"
-
+void print_error(const char *message);
+void get_type(Elf64_Ehdr *ehdr);
 /**
  * get_type - determine file type
  * @ehdr: pointer to struct of ELF header features
