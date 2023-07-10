@@ -63,9 +63,9 @@ int main(int argc, char *argv[])
 		close(fd);
 		exit(98);
 	}
-	close(fd); // Close the file descriptor after reading the ELF header
+	close(fd); /* Close the file descriptor after reading the ELF header */
 	get_magic(helf, argv[1], fd);
-	// Call other functions for further analysis
+	/*  Call other functions for further analysis */
 	free(helf);
 	exit(EXIT_SUCCESS);
 }
