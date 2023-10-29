@@ -1,0 +1,8 @@
+.PHONY := all school clean
+all: school
+
+school:
+	gcc main.c school.c -o school
+
+clean:
+	rm school
