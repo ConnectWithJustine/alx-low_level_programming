@@ -383,4 +383,4 @@ void shash_table_delete(shash_table_t *ht)
 {
 	shash_table_delete_slist(ht);
 	shash_table_delete_arr(ht);
-}*
+}
